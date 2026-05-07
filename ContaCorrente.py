@@ -6,6 +6,7 @@ class ContaCorrente(Conta):
         total = valor + taxa
 
         if total <= self._saldo:
+            self._saldo -= total
             print(f"saque de R$ {valor} + R$ {taxa} de taxa realizado.")
         else:
             print("saldo insuficiente")
